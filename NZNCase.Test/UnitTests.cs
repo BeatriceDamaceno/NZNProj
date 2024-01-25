@@ -24,5 +24,12 @@ namespace NZNCaseTest
             else Assert.Fail();
 
         }
+
+        [Test]
+        public void LargestWordInArray()
+        {
+            if (NZNCase.Globals.largestWord != "") Assert.Pass();
+            Assert.Fail();
+        }
     }
 }
