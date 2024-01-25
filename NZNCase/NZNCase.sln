@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NZNCase", "NZNCase.csproj", "{111765A4-A56D-43AD-8B26-70A0CDDD5BC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NZNCaseTest", "..\NZNCase.Test\NZNCaseTest.csproj", "{5C1B6ECF-C0F6-434E-82B8-C10F9DAD5266}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{111765A4-A56D-43AD-8B26-70A0CDDD5BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{111765A4-A56D-43AD-8B26-70A0CDDD5BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{111765A4-A56D-43AD-8B26-70A0CDDD5BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{111765A4-A56D-43AD-8B26-70A0CDDD5BC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C1B6ECF-C0F6-434E-82B8-C10F9DAD5266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C1B6ECF-C0F6-434E-82B8-C10F9DAD5266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C1B6ECF-C0F6-434E-82B8-C10F9DAD5266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C1B6ECF-C0F6-434E-82B8-C10F9DAD5266}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A2F9419-D90D-4334-B24B-3DB5F95F5077}
+	EndGlobalSection
+EndGlobal
