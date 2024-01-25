@@ -2,20 +2,19 @@ namespace NZNCaseTest
 {
     public class Tests
     {
+
         [Test]
         public void WordsFoundInArray()
         {
-           List<string> foundWords = NZNCase.WordHandler.FindWords(NZNCase.Globals.targetString);
-            Assert.That(foundWords.Count, Is.GreaterThan(0));
+            Assert.That(Globals.foundWords.Count, Is.GreaterThan(0));
         }
 
         [Test]
         public void WordArrayRepetitionTest()
         {
-            List<string> foundWords = NZNCase.WordHandler.FindWords(NZNCase.Globals.targetString);
-            foundWords = NZNCase.WordHandler.RemoveRepeats(foundWords);
+            Globals.foundWords = NZNCase.WordHandler.RemoveRepeats(Globals.foundWords);
 
-            var repeatedWords = foundWords.GroupBy(w => w)
+            var repeatedWords = Globals.foundWords.GroupBy(w => w)
                 .Where(group => group.Count() > 1)
                 .Select(group => group.Key)
                 .ToList();
@@ -28,8 +27,9 @@ namespace NZNCaseTest
         [Test]
         public void LargestWordInArray()
         {
-            if (NZNCase.Globals.largestWord != "") Assert.Pass();
-            Assert.Fail();
+            NZNCase.Globals.largestWord = NZNCase.WordHandler.FindLargestWord(Globals.foundWords);
+            if (NZNCase.Globals.largestWord == null) Assert.Fail();
+            Assert.Pass();
         }
     }
 }

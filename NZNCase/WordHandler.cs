@@ -50,5 +50,11 @@ namespace NZNCase
 
             return wordsFound;
         }
+
+        public static string FindLargestWord(List<string> foundWords)
+        {
+            foundWords = foundWords.OrderBy(word => word.Length).ToList();
+            return foundWords.FirstOrDefault().ToString();
+        }
     }
 }
