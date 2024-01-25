@@ -30,20 +30,20 @@ namespace NZNCase
         public static string[] ConfigDictionary (string[] dictionary)
         {
             dictionary = File.ReadAllLines(Path.Combine(Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName).ToString(), "portuguese.txt"));
-            dictionary = dictionary.Where(x => x.Length > 1 && !x.Contains("-")).ToArray();
+            dictionary = dictionary.Where(word => word.Length > 1 && !word.Contains("-")).ToArray();
 
             return dictionary;
         }
 
         public static List<string> OrderWords(List<string> wordsFound)
         {
-            wordsFound = wordsFound.OrderByDescending(w => w.Length).ToList();
+            wordsFound = wordsFound.OrderByDescending(word => word.Length).ToList();
             return wordsFound;
         }
 
         public static List<string> RemoveRepeats(List<string> wordsFound)
         {
-            wordsFound = wordsFound.GroupBy(w => w)
+            wordsFound = wordsFound.GroupBy(word => word)
                 .Where(group => group.Count()  > 0)
                 .Select(group => group.Key)
                 .ToList();
@@ -53,7 +53,7 @@ namespace NZNCase
 
         public static string FindLargestWord(List<string> foundWords)
         {
-            foundWords = foundWords.OrderBy(word => word.Length).ToList();
+            foundWords = foundWords.OrderByDescending(word => word.Length).ToList();
             return foundWords.FirstOrDefault().ToString();
         }
     }

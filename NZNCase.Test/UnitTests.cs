@@ -27,8 +27,7 @@ namespace NZNCaseTest
         [Test]
         public void LargestWordInArray()
         {
-            NZNCase.Globals.largestWord = NZNCase.WordHandler.FindLargestWord(Globals.foundWords);
-            if (NZNCase.Globals.largestWord == null) Assert.Fail();
+            if (NZNCase.WordHandler.FindLargestWord(Globals.foundWords) == null) Assert.Fail();
             Assert.Pass();
         }
     }
